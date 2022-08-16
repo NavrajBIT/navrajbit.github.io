@@ -1,0 +1,282 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.outerbody {
+  height: 100%;
+  background-color: floralwhite;
+  /* margin-top: 100px; */
+  /* z-index: -1; */
+  /* background-color: rgb(170,219,30) !important; */
+
+  border: none;
+  /* position: absolute; */
+  
+
+}
+.login_nav {
+  /* border: 2px solid red; */
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  top: 0%;
+  /* background-image: linear-gradient(top, red, red 70%, transparent 70%, transparent 100%); */
+}
+
+.gradient {
+  width: 160vh;
+  height: 100px;
+  margin: auto;
+  border-bottom-left-radius: 50%;
+  /* background-image: -webkit-linear-gradient( top , red 12%, red 5%, transparent 50%, transparent 150%) ; */
+  /* border-bottom-right-radius: 50%; */
+  border: none;
+  /* background: url('https://www.myweb3.club/static/media/background.a01ee447.png'); */
+  background-size: cover;
+  opacity: 0.6;
+}
+
+.login_nav .connect_button {
+  /* border: 2px solid red; */
+  width: 200px;
+  margin-right: 80px;
+}
+
+.login_nav .logo {
+  height: 90px;
+  width: 200px;
+  margin-left: 50px;
+  margin-top: 20px;
+}
+.createButton {
+  margin-left: 450px;
+}
+
+.createButton button {
+  width: 100%;
+  padding: 13px 10px;
+  border-radius: 5px;
+  /* background-color: black; */
+  font-size: 20px;
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+  /* background: linear-gradient(#2B19FF, #AA60FA, #F62070); */
+  color: black;
+  font-weight: 700;
+
+  /* margin-right: 00px; */
+}
+
+.clubButton button {
+  width: 100%;
+  padding: 13px 10px;
+  border-radius: 5px;
+  /* background-color: black; */
+  font-size: 20px;
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+  /* background: linear-gradient(#2B19FF, #AA60FA, #F62070); */
+  color: black;
+  font-weight: 700;
+}
+
+.clubButton {
+  /* margin-left: 450px; */
+}
+
+.login_nav .connect_button button {
+  width: 100%;
+  padding: 13px 10px;
+  border-radius: 5px;
+  background-color: black;
+  font-size: 18px;
+  border: none;
+  cursor: pointer;
+  /* background-color: beige; */
+  /* background: linear-gradient(#2B19FF, #AA60FA, #F62070); */
+  color: white;
+  font-weight: 700;
+}
+
+.login_nav .connect_button button:hover {
+  background-color: rgb(170, 219, 30);
+}
+
+.main_login_page {
+  /* border: 2px  solid; */
+  height: 60vh;
+  margin: auto;
+  /* width: 80vh; */
+  margin-top: 50px;
+  border-radius: 20px;
+  /* background-color: rgb(170,219,30) !important; */
+  /* background-color:	floralwhite; */
+}
+.main_login_page .login_box .mainheading {
+  font-size: 33px;
+  margin-top: -100px;
+  width: 140vh;
+  text-transform: capitalize;
+  text-align: center;
+  /* border: 2px  solid; */
+  padding: 20px 5px;
+  /* box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px; */
+  /* height: 100px; */
+  /* border-radius: 12px; */
+  border: none;
+  /* opacity: 0.9; */
+  box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
+  /* font-family: fac; */
+  text-align: justify;
+}
+.mainheading h4 {
+  /* background: -webkit-linear-gradient(#00467f, #a5cc82); */
+  background: -webkit-linear-gradient(
+ 
+    #83a4af
+    ,
+    #414649
+);
+
+  
+
+  
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 900;
+}
+
+.main_login_page .login_box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.login_box .logo {
+  width: 200px;
+  height: 150px;
+  /* border: 2px solid; */
+  margin-top: 30px;
+}
+.login_box .connect_button {
+  width: 200px;
+  margin-top: 80px;
+
+  /* background: linear-gradient(91.96deg,#4e48f2 17.52%,#7f5ae4 91.27%); */
+}
+.login_box .connect_button button {
+  cursor: pointer;
+  width: 200px;
+  text-align: center;
+  height: 50px;
+  line-height: 50px;
+  border-radius: 4px;
+  margin: 40px auto;
+  color: white;
+  /* font-family: fac; */
+  word-spacing: 2px;
+  letter-spacing: 1px;
+  border: none;
+  font-size: 20px;
+  /* margin-top: -70px; */
+  font-weight: 700;
+
+  /* background-color: black; */
+}
+
+.connect_button button:hover {
+  background-color: ivory;
+  /* color: black; */
+  /* font-weight: 700; */
+}
+
+.logo img {
+  height: 100%;
+  width: 100%;
+}
+
+.progress-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 10px;
+  background: blueviolet;
+  opacity: 0.5;
+  transform-origin: 0%;
+}
+
+.image {
+  /* border: 2px solid; */
+  margin-top: -120px;
+  /* margin-bottom: 100px; */
+  padding: 20px 10px;
+  /* border: 2px solid red; */
+}
+.image .img {
+  margin: auto;
+  height: 400px;
+  width: 800px ;
+  /* border-radius: 0% !important; */
+  margin-bottom: 100px;
+
+}
+
+.img img {
+  height: 100%;
+  width: 100%;
+  border-radius: 9px;
+
+}
+
+.instructions {
+  /* border: 2px solid red; */
+  height: 100px;
+  margin-bottom: 50px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.instructions button {
+  padding: 15px 15px;
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+  /* background-color: palevioletred; */
+  background-color: #00467f;
+  /* color: #a5cc82; */
+  color: whitesmoke;
+  font-size: 17px;
+  font-weight: bolder;
+  /* color: -webkit-linear-gradient(#00467f,#a5cc82); */
+}
+
+.box {
+  border-radius: 50%;
+  background: var(--accent);
+}
+
+.built_on {
+  text-align: center;
+  margin-top: 60px;
+  position: relative;
+  color: rgb(82, 78, 78);
+  font-size: medium;
+}
+
+.built_on img {
+  height: 50px;
+  position: absolute;
+  top: -10px;
+  right: 450px;
+  /* right: inherit; */
+  cursor: pointer;
+}

@@ -1,0 +1,158 @@
+/*  */
+ 
+.categories{
+    height: 180vh;
+    /* border: 2px solid red; */
+    margin-top: 20px;
+    display: flex;
+    background-color: rgb(208, 214, 216);
+    /* font-family: 'Alumni Sans Inline One', cursive; */
+    font-family: 'Roboto Mono', monospace;
+}
+ 
+.heading{
+    /* border: 2px solid red; */
+    height: 120px;
+    margin-top: 50px;
+    display: flex;
+    /* align-items: center; */
+    justify-content: center;
+    text-align: center;
+    
+
+}
+.heading h3{
+    width: 800px;   
+    font-size: 24px;
+    text-align: center;
+    font-weight: 700;
+    background: -webkit-linear-gradient(
+        #b24592
+,
+#f15f79);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+    
+}
+.videos{
+    /* height: 300px; */
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+    flex-direction: column;
+    flex: 70%;
+    /* border: 2px solid royalblue; */
+    padding: 50px 30px;
+    overflow: scroll;
+}
+/* width */
+.videos::-webkit-scrollbar {
+    width: 20px;
+    display: block;
+
+  }
+  
+  /* Track */
+  .videos::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+  
+  /* Handle */
+  .videos::-webkit-scrollbar-thumb {
+    background: #888;
+  }
+  
+  /* Handle on hover */
+  .videos::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+
+
+
+.videos .video{
+    margin: 10px 10px;
+    /* border: 2px solid rebeccapurple; */
+    height: 400px !important;
+    cursor: pointer;
+    text-align: center;
+    /* width: 500px !important; */
+    display: flex;
+    padding: 10px 10px;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.ratings{
+    display: flex;
+    /* border: 2px solid; */
+    align-items: center;
+    /* justify-content: space-between; */
+    /* margin-top: -20px; */
+}
+.ratings ul{
+    display: flex;
+}
+.ratings ul li{
+    list-style: none;
+    margin:15px 0px;
+    font-size: 25px;
+    cursor: pointer;
+    /* color: red; */
+    fill: red;
+
+}
+
+.controls{
+    border: 2px solid red;
+}
+
+.catheading{
+    font-size: 40px;
+    /* border: 2px solid; */
+    margin: 30px;
+    font-weight: 700;
+}
+
+.upperpart{
+    /* border: 2px solid ; */
+    display: flex;
+    /* justify-content: space-around; */
+    align-items: center;
+    /* height: 50px; */
+    flex-direction: column;
+    /* flex: 10%; */
+    width: 300px;
+    background-color: black;
+    color: white;
+}
+.upperpart ul li{
+    list-style: none;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: 600;
+    margin:20px auto;
+    /* border: 2px solid; */
+    text-align: left;
+    width: 250px;
+    padding: 10px;
+    margin-right: 110px;
+
+}
+.ul li:hover{
+    background-color: aliceblue;
+    border-radius: 7px;
+    color: black;
+}
+
+.upperpart ul{
+    /* border: 2px solid ; */
+    width: 500px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+
+}
+
+
+
+
