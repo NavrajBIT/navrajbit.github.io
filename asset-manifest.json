@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.3fc11cf0.css",
-    "main.js": "/static/js/main.01d91f41.js",
+    "main.js": "/static/js/main.e7ed12d6.js",
     "static/js/787.6a3ccc72.chunk.js": "/static/js/787.6a3ccc72.chunk.js",
     "static/media/loginPageImage.webp": "/static/media/loginPageImage.c01f185b13468e22c975.webp",
     "static/media/BITlogo.png": "/static/media/BITlogo.f164d2add327e15ad523.png",
@@ -10,11 +10,11 @@
     "static/media/view.svg": "/static/media/view.e33f94d93b7271fa9904228a80af36e8.svg",
     "static/media/rating.svg": "/static/media/rating.6159865ea9c8d3e4ccd0190c0294b1db.svg",
     "main.3fc11cf0.css.map": "/static/css/main.3fc11cf0.css.map",
-    "main.01d91f41.js.map": "/static/js/main.01d91f41.js.map",
+    "main.e7ed12d6.js.map": "/static/js/main.e7ed12d6.js.map",
     "787.6a3ccc72.chunk.js.map": "/static/js/787.6a3ccc72.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.3fc11cf0.css",
-    "static/js/main.01d91f41.js"
+    "static/js/main.e7ed12d6.js"
   ]
 }
