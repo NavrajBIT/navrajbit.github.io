@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.css": "/static/css/main.0573003d.css",
+    "main.js": "/static/js/main.c046411e.js",
+    "static/js/787.6a3ccc72.chunk.js": "/static/js/787.6a3ccc72.chunk.js",
+    "static/media/loginPageImage.webp": "/static/media/loginPageImage.c01f185b13468e22c975.webp",
+    "static/media/BITlogo.png": "/static/media/BITlogo.f164d2add327e15ad523.png",
+    "static/media/polygon.png": "/static/media/polygon.be8aae57bb469c33bf7c.png",
+    "index.html": "/index.html",
+    "static/media/rating.svg": "/static/media/rating.6159865ea9c8d3e4ccd0190c0294b1db.svg",
+    "main.0573003d.css.map": "/static/css/main.0573003d.css.map",
+    "main.c046411e.js.map": "/static/js/main.c046411e.js.map",
+    "787.6a3ccc72.chunk.js.map": "/static/js/787.6a3ccc72.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.0573003d.css",
+    "static/js/main.c046411e.js"
+  ]
+}
