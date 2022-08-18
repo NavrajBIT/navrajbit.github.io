@@ -184,7 +184,13 @@ export const Talent = () => {
 
             <div className="playerdetails">
               <h3>Added by:</h3>
-              <a href="/profile">Coach Priti Kaur</a>
+              <a
+                onClick={() => {
+                  navigate("/profile");
+                }}
+              >
+                Coach Priti Kaur
+              </a>
             </div>
 
             <h3>

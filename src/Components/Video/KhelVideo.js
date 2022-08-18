@@ -2,8 +2,10 @@ import React from "react";
 import "./KhelVideo.css";
 import ratingStar from "../../Images/rating.svg";
 import viewIcon from "../../Images/view.svg";
+import { useNavigate } from "react-router-dom";
 
 const KhelVideo = (props) => {
+  const navigate = useNavigate();
   return (
     <div className="khelvideocontainer">
       <div>
@@ -27,7 +29,13 @@ const KhelVideo = (props) => {
       <div className="khelvideoinfo">
         <div className="playerinfo">
           <div className="playername">
-            <a href="/talent">{props.player}</a>
+            <a
+              onClick={() => {
+                navigate("/talent");
+              }}
+            >
+              {props.player}
+            </a>
           </div>
           <div>{props.sport}</div>
         </div>

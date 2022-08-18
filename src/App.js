@@ -1,4 +1,5 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { HashRouter } from "react-router-dom";
 import Login from "./Components/LoginPage/Login";
 import Navbar from "./Components/Navbar/Navbar";
 import Footer from "./Components/Footer/Footer";
@@ -11,7 +12,7 @@ import UserState from "./Context/UserState";
 function App() {
   return (
     <div style={{ position: "relative" }}>
-      <Router>
+      <HashRouter>
         <UserState>
           <Navbar />
           <Routes>
@@ -23,7 +24,7 @@ function App() {
           </Routes>
           <Footer />
         </UserState>
-      </Router>
+      </HashRouter>
     </div>
   );
 }
