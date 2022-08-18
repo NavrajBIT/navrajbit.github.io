@@ -101,7 +101,7 @@ export const Talent = () => {
             <input type="text" id="name" placeholder="Enter name" />
           </div>
           <div className="editform">
-            <label htmlFor="description">Description:</label>
+            <label htmlFor="description">Journey:</label>
             <textarea
               name="description"
               id="description"
@@ -109,11 +109,55 @@ export const Talent = () => {
               rows="10"
             ></textarea>
           </div>
+          <div className="editform">
+            <label htmlFor="">Age:</label>
+            <input type="number" placeholder="age in years" />
+          </div>
+          <div className="editform">
+            <label htmlFor="">Gender</label>
+            <select name="" id="">
+              <option value="">Male</option>
+              <option value="">Female</option>
+              <option value="">Other</option>
+            </select>
+          </div>
+          <div className="editform">
+            <label htmlFor="">Father's name:</label>
+            <input type="text" placeholder="Enter Father's name" />
+          </div>
+          <div className="editform">
+            <label htmlFor="">Mother's name:</label>
+            <input type="text" placeholder="Enter Mother's name" />
+          </div>
+          <div className="editform">
+            <label htmlFor="">Sport</label>
+
+            <select name="" id="">
+              <option value="">Cricket</option>
+              <option value="">Volleyball</option>
+              <option value="">Badminton</option>
+              <option value="">Basketball</option>
+              <option value="">Hockey</option>
+              <option value="">Athletics</option>
+            </select>
+          </div>
           <button onClick={() => setIsEditting(false)}>Save</button>
         </div>
       </div>
     );
   };
+
+  // name : "",
+  // age :"",
+  // sex :" ",
+  // fname :"",
+  // mname :"",
+  // address :"",
+  // skilledSports : "",
+  // achievements :" ",
+  // journeyWriteUp:"",
+  // creatorName:"",
+  // creatorWalletAddress :""
 
   return (
     <>
@@ -125,6 +169,24 @@ export const Talent = () => {
           <div className="dataSection">
             <h1>Mahender Singh</h1>
             <h2>Hockey Player</h2>
+            <div className="playerdetails">
+              <h3>Gender:</h3>
+              <h3>Male</h3>
+            </div>
+            <div className="playerdetails">
+              <h3>Father&apos;s Name:</h3>
+              <h3> Jitender Singh</h3>
+            </div>
+            <div className="playerdetails">
+              <h3>Mother&apos;s Name:</h3>
+              <h3>Suneeta Kaur</h3>
+            </div>
+
+            <div className="playerdetails">
+              <h3>Added by:</h3>
+              <a href="/profile">Coach Priti Kaur</a>
+            </div>
+
             <h3>
               The difference between the old ballplayer and the new ballplayer
               is the jersey. The old ballplayer cared about the name on the
@@ -147,7 +209,7 @@ export const Talent = () => {
         <div className="videoSection">
           {videosData.map((video) => {
             return (
-              <div key={video.title}>
+              <div className="videocontainer" key={video.title}>
                 <KhelVideo
                   src={video.src}
                   title={"Mahender Singh playing Hockey"}

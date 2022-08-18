@@ -46,3 +46,15 @@
   align-items: center;
   justify-content: center;
 }
+
+.videopostercontainer {
+  padding: 20px 20px 0px 20px;
+  display: flex;
+}
+
+.videocontainer img {
+  height: 30px;
+  width: 30px;
+  border-radius: 15px;
+  margin-right: 10px;
+}

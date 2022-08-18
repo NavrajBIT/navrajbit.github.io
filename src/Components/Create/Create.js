@@ -49,6 +49,9 @@ const Create = () => {
             <select name="" id="">
               <option value="">Cricket</option>
               <option value="">Volleyball</option>
+              <option value="">Badminton</option>
+              <option value="">Basketball</option>
+              <option value="">Hockey</option>
               <option value="">Athletics</option>
             </select>
             Describe player's journey

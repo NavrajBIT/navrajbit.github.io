@@ -190,7 +190,14 @@ const Profile = () => {
           </div>
           <div className="editform">
             <label htmlFor="description">Sport:</label>
-            <input type="text" id="name" placeholder="Enter sport" />
+            <select name="" id="">
+              <option value="">Cricket</option>
+              <option value="">Volleyball</option>
+              <option value="">Badminton</option>
+              <option value="">Basketball</option>
+              <option value="">Hockey</option>
+              <option value="">Athletics</option>
+            </select>
           </div>
           <div className="editform">
             Select player:
@@ -280,7 +287,7 @@ const Profile = () => {
         <div className="videoSection">
           {videosData.map((video) => {
             return (
-              <div key={video.title}>
+              <div className="videocontainer" key={video.title}>
                 <KhelVideo
                   src={video.src}
                   title={video.title}

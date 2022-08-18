@@ -1,8 +1,10 @@
 import React, { useState } from "react";
 import "./Categories.css";
 import KhelVideo from "../Video/KhelVideo";
+import { useNavigate } from "react-router-dom";
 
 const Categories = () => {
+  const navigate = useNavigate();
   const videosData = [
     {
       name: "Surender Singh",
@@ -78,6 +80,9 @@ const Categories = () => {
     },
   ];
 
+  const profileUrl =
+    "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8dXNlciUyMHByb2ZpbGV8ZW58MHx8MHx8&w=1000&q=80";
+
   return (
     <>
       <div className="explorepage">
@@ -117,6 +122,16 @@ const Categories = () => {
             {videosData.map((video) => {
               return (
                 <div key={video.title}>
+                  <div className="videopostercontainer">
+                    <img
+                      src={profileUrl}
+                      alt=""
+                      onClick={() => {
+                        navigate("/profile");
+                      }}
+                    />
+                    <h3>Coach Priti Kaur</h3>
+                  </div>
                   <KhelVideo
                     src={video.src}
                     title={video.title}

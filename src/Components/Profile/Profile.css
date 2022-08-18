@@ -3,6 +3,10 @@
   flex-direction: column;
 }
 
+.profilepage a {
+  color: var(--accent);
+}
+
 .profileSection {
   display: grid;
   grid-template-columns: 1fr 3fr;
@@ -103,4 +107,13 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+}
+
+.videocontainer {
+  margin-top: 30px;
+}
+
+.playerdetails {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
 }

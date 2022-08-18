@@ -1,6 +1,7 @@
 import React from "react";
 import "./KhelVideo.css";
 import ratingStar from "../../Images/rating.svg";
+import viewIcon from "../../Images/view.svg";
 
 const KhelVideo = (props) => {
   return (
@@ -16,7 +17,13 @@ const KhelVideo = (props) => {
           allowFullScreen
         ></iframe>
       </div>
-      <h3>{props.title}</h3>
+      <div className="videotitlecontainer">
+        <h3>{props.title}</h3>
+        <div className="viewscontainer">
+          301,012
+          <img src={viewIcon} alt="" />
+        </div>
+      </div>
       <div className="khelvideoinfo">
         <div className="playerinfo">
           <div className="playername">

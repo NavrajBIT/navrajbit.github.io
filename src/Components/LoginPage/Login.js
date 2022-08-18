@@ -61,6 +61,7 @@ const Login = () => {
         <div className="ctaSection">
           <h1>Become a Content-Creator</h1>
           <h2>Help the budding talent of India</h2>
+          <h3>Identify Talent - Create Content - Receive Rewards</h3>
           <div className="steps">
             <h3>Step1. Connect your wallet</h3>
             <h3>Step2. Create your profile</h3>
