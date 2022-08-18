@@ -1,311 +1,69 @@
 import React, { useContext, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import UserContext from "../../Context/UserContext";
-import UserData from "../../Context/UserData";
-import Navbar from "../Navbar/Navbar";
 import "./Create.css";
 
 const Create = () => {
-  const data = useContext(UserContext)
-
+  const data = useContext(UserContext);
   const navigate = useNavigate();
 
-  const [selectedFile, setSelectedFile] = useState();
-  const [demoImage , setDemoImage] = useState()
+  const [selectedFile, setSelectedFile] = useState(
+    "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBw8NDQ0NDQ0NDg0NDQ0NDQ0NDQ8NDQ0NFREWFhURFRUYHSggGBolGxUVITIhJSkrLi4vFx8zODMtNygtLisBCgoKBQUFDgUFDisZExkrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrK//AABEIAMcA/QMBIgACEQEDEQH/xAAbAAEBAQEBAQEBAAAAAAAAAAAAAQYFBAMCB//EADwQAQACAQAFCQUFBwUBAAAAAAABAgMEBREx0QYSFiFBUVJxkSJCYYGxEyMzgsEyQ2JzkqHhU2NyovEU/8QAFAEBAAAAAAAAAAAAAAAAAAAAAP/EABQRAQAAAAAAAAAAAAAAAAAAAAD/2gAMAwEAAhEDEQA/AP7UAAIoIqAAACoAogCiPzkyVpHOtaKx32nZAP0rl59e4K9UTa//ABjq9Zea3KSvZit87QDuo4lOUdPex3jymJe3R9bYMnVF4rPdf2Qe8QAABUAFEAFQBUAFRUBUFBFQAAAAAAABxdfa05n3OOfbmPbtHux3eYP3rTXVcW2mLZbJumfdrxlndI0i+W3OyWm0/HdHlHY+QAAAAD2aDrPLgmObO2ngt1x8u5p9X6wppFdteq0ftUnfHGGMfvBmtjtF6TstG6f0Bux5dW6bGkY4tHVaOq9e6eD1AAAAAAAAACoCoqAAAAAAAAA8+sNKjDivknfEbKx32ncxV7zaZtM7ZmZmZ75dzlRn68eKN0RN5890fq4QAAAAAAAAPZqnTPsMtbe5bZW8fCe35NkwLY6mz/aaPjmd8RzZ84B7QAAAAAAAAAURQRUAAAVABRAGR1/fbpN/4YrX+239XPe/XsbNKy/Hmz/1h4AAAAAAAAAGk5LX+7yV7rxPrH+GbaLktX2Ms996x6R/kHdQAUQBRAFEAUQBUFBAAAAAAAUGZ5T4dmWl+y1dnzj/ANcZr9daJ9tgtER7dPbr8dm+PRkAAAAAAAAAGs5P4eZo9Z7bzN+H0ZnQ9HnLkpjj3p657q9stvSkVrFY3ViIjygFAAAAAAAAFQFQAAAAAAAAAGY19q77O05aR93afaiPctwadL0i0TW0RMTGyYnriYBgh2Naaltj23xRNqb5rvtXjDjgAAAAEQ/WLFa9orSs2tO6IjbLS6p1PGLZky7LZOyN9acZB+9R6u+xpz7x95eN3hr3OqgAqAKIAogCiAKgAAAAAAAAAAAAAPFpmqsWbrtXm28VOqf8vckyDOZuTl4/DyVtHdaJrLzW1HpEe7WfK0NTOWsb7Vj80Pz/APVj/wBSn9UAzNNQ553xSvnZ7tH5ORvy5Jn+GkbP7y7MaTjndkp/VD9xeJ3WifnAPlo2i48UbMdIr3z2z5y+woIAAKgAKAgAKgAKgAACoAAAAAD4aXpdMNedktsjsjfNp7ohmtP1zky7YrM46d1Z9qY+Mg0Ol6zw4dsWvE28NfalydI5R23YscR8bztn0hwgHty62z335Zj4V2V+jy3zXt+1e0+dpfgARQEWJmN0zHkAPtj0vLX9nJePzS9mHXmeu+1bx3Xr+sOaA0mjcoaT1ZKTSe+s86vF1sGkUyRtx2i0fCd3mwr9YstqTFqWmto7YnZIN6OBq7X23ZTP1dkZIjq+cO9ExMbYnbE7pjcCoAKIAqACoAAAAAAADzaw0yuCk3t1zurXttL0zOyJmd0dcsbrTTZz5Zt7sezSO6vf8wfHS9KvmvN7ztmd0dlY7ofEAAAAAAAAAAAAAHU1PrWcMxS87cU+tJ74+DlgN9ExMRMdcT1xPwVwuTenbYnBaeusbcfl2w7oAACKAIqAoAIAAADm8oNI+z0eYjfkmKfLfP8Ab6sm0HKqerDHxvP0Z8AAAAAAAAAAAAAAAAH10TNOLJTJHu2ifOO2PRuYmJiJjdMbY8mBbfQJ24cU/wC3X6A+4oCCoAKAAAgAAAODyq/c/n/Rn3f5Vfufz/o4AAAAAAAAAAAAAAAAADbav/Axfy6/RiW21f8AgYv5dfoD0iAKgAogCiAKIoIADg8qv3P5/wBGfbLWGrqaRzefa0c3bs5uztePo7i8eT1rwBmRpujuLx5PWvA6O4vHk9a8AZkabo7i8eT1rwOjuLx5PWvAGZGm6O4vHk9a8Do7i8eT1rwBmRpujuLx5PWvA6O4vHk9a8AZkabo7i8eT1rwOjuLx5PWvAGZGm6O4vHk9a8Do7i8eT1rwBmRpujuLx5PWvA6O4vHk9a8AZkabo7i8eT1rwOjuLx5PWvAGZbbV/4GL+XX6Of0dxePJ614OrhxxSlaRurEVjbv2QD6IqAqKgKIoAAIoAgoCCgIKAigAigIoAgoAAAAAAAigAAAAAAP/9k="
+  );
 
-  const [con , setCon] = useState("")
+  // name : "",
+  // age :"",
+  // sex :" ",
+  // fname :"",
+  // mname :"",
+  // address :"",
+  // skilledSports : "",
+  // achievements :" ",
+  // journeyWriteUp:"",
+  // creatorName:"",
+  // creatorWalletAddress :""
 
-  let fileData = new FileReader();
-
-  const handleFile = (e) => {
-    const content = e.target.result;
-    console.log('file con?tent',  content)
-    // setDemoImage(content)
-    setCon(content)
-    // You can set content in state and show it in render.
-  }
-
-  const handleChangeFile = (file) => {
-    fileData.onloadend = handleFile;
-    // fileData.readAsText(file);
-    fileData.readAsDataURL(file)
-  }
-
-
-  const [userValue , setUserValue] = useState({
-    name : "",
-    age :"",
-    sex :" ",
-    fname :"",
-    mname :"",
-    address :"",
-    skilledSports : "",
-    achievements :" ",
-    journeyWriteUp:"",
-    creatorName:"",
-    creatorWalletAddress :""
-  })
-
-  const userData = (e) => {
-    setUserValue({ ...userValue , [e.target.name] : e.target.value })
-    
-  }
-  
-  const collectSubmitedUserData = () => {
-    // console.log(userValue);
-    // console.log(data.user);
-    data.setUser(userValue)
-    // console.log(fileData);
-    data.setProfileUrl(con)
-
-
-  }
   return (
     <>
-      <div className="nav" style={{ height: "110px" }}>
-        <Navbar text={"Connect Wallet"} />
-      </div>
-
-      <div className="create_outer">
-        <div className="form">
-          <div className="title">Welcome</div>
-          <div className="subtitle">Let's create your account!</div>
-          <div className="input-container ic1">
-            <input
-              id="name"
-              className="input"
-              type="text"
-              placeholder=" "
-              onChange={userData}
-              name="name"
-              value={userValue.name}
-              required
-            />
-            <div className="cut" />
-            <label htmlFor="tname" className="placeholder">
-              Name <span>*</span>
-            </label>
+      <div className="createpage">
+        <h2>Add Player Data</h2>
+        <div className="playerdataformcontainer">
+          <div className="profilepiccontainer">
+            <img src={selectedFile} alt="" />
           </div>
-          <div className="input-container ic2">
-            <input
-              id="age"
-              className="input"
-              type="text"
-              placeholder=" "
-              onChange={userData}
-              name="age"
-              value={userValue.age}
-              required
-            />
-            <div className="cut" />
-            <label htmlFor="age" className="placeholder">
-              Age <span>*</span>
-            </label>
+          <div className="profilepictext">Upload profile pic</div>
+
+          <div className="playerdataform">
+            <input type="text" placeholder="Player Name" />
+            <input type="number" placeholder="Player Age in years" />
+            Select gender
+            <select name="genderfield" id="genderfield">
+              <option value="male">Male</option>
+              <option value="female">Female</option>
+              <option value="other">Other</option>
+            </select>
+            <input type="text" placeholder="Father's Name" />
+            <input type="text" placeholder="Mother's Name" />
+            <input type="text" placeholder="Address" />
+            Select Sport
+            <select name="" id="">
+              <option value="">Cricket</option>
+              <option value="">Volleyball</option>
+              <option value="">Athletics</option>
+            </select>
+            Describe player's journey
+            <textarea name="" id="" cols="30" rows="10"></textarea>
+            <button
+              onClick={() => {
+                navigate("/talent");
+              }}
+            >
+              <h3>Add Player</h3>
+            </button>
           </div>
-          <div className="input-container ic2">
-            <input
-              id="sex"
-              className="input"
-              type="text"
-              placeholder=" "
-              onChange={userData}
-              name="sex"
-              value={userValue.value}
-              required
-            />
-            <div className="cut cut-short" />
-            <label htmlFor="sex" className="placeholder">
-              Sex <span> </span>
-            </label>
-          </div>
-
-          <div className="input-container ic2">
-            <input
-              id="fname"
-              className="input"
-              type="text"
-              placeholder=" "
-              onChange={userData}
-              name="fname"
-              value={userValue.fname}
-              required
-
-            />
-            <div className="cut cut-short" />
-            <label htmlFor="fname" className="placeholder">
-              Father Name <span>*</span>
-            </label>
-          </div>
-
-          <div className="input-container ic2">
-            <input
-              id="mname"
-              className="input"
-              type="text"
-              placeholder=" "
-              onChange={userData}
-              name="mname"
-              value={userValue.mname}
-              required
-            />
-            <div className="cut cut-short" />
-            <label htmlFor="mname" className="placeholder">
-              Mother Name <span>*</span>
-            </label>
-          </div>
-
-          <div className="input-container ic2">
-            <input
-              id="address"
-              className="input"
-              type="text"
-              placeholder=" "
-              onChange={userData}
-              name="address"
-              value={userValue.address}
-              required
-            />
-            <div className="cut cut-short" />
-            <label htmlFor="address" className="placeholder">
-              Address <span>*</span>
-            </label>
-          </div>
-
-          <div className="input-container ic2">
-            <input
-              id="ssn"
-              className="input"
-              type="text"
-              placeholder=" "
-              onChange={userData}
-              name="skilledSports"
-              value={userValue.skilledSports}
-              required
-            />
-            <div className="cut cut-short" />
-            <label htmlFor="ssn" className="placeholder">
-              Skilled Sports Name <span>*</span>
-            </label>
-          </div>
-
-          <div className="input-container ic2">
-            <textarea
-              id="achievements"
-              className="input"
-              type="text"
-              placeholder=" "
-              rows="100"
-              cols="20"
-              onChange={userData}
-              name="achievements"
-              value={userValue.achievements}
-              required
-            ></textarea>
-            <div className="cut cut-short" />
-            <label htmlFor="achievements" className="placeholder">
-              Achievements <span>*</span>
-            </label>
-          </div>
-
-          <div className="input-container ic2">
-            <textarea
-              id="jw"
-              className="input"
-              type="text"
-              placeholder=" "
-              rows="100"
-              cols="20"
-              onChange={userData}
-              name="journeyWriteUp"
-              value={userValue.journeyWriteUp}
-            ></textarea>
-            <div className="cut cut-short" />
-            <label htmlFor="jw" className="placeholder">
-              Journey WriteUp <span>*</span>
-            </label>
-          </div>
-
-          <div className="input-container ic2 file">
-            <input
-              id="image"
-              className="input"
-              type="file"
-              placeholder=" "
-              // onChange={userData}
-              // value={selectedFile}
-              // onChange={(e) => setSelectedFile(e.target.files[0])}
-
-              onChange={e => 
-            handleChangeFile(e.target.files[0])}
-              name="image"
-              // value={userValue.video}
-              required
-            />
-            <div className="cut cut-short" />
-            <label htmlFor="image" className="placeholder">
-              Image <span>*</span>
-            </label>
-          </div>
-
-          <div className="input-container ic2">
-            <input
-              id="ccn"
-              className="input"
-              type="text"
-              placeholder=" "
-              rows="100"
-              cols="20"
-              onChange={userData}
-              name="creatorName"
-              value={userValue.creatorName}
-              required
-            />
-            <div className="cut cut-short" />
-            <label htmlFor="ccn" className="placeholder">
-              Content Creator Name <span>*</span>
-            </label>
-          </div>
-
-          <div className="input-container ic2">
-            <input
-              id="ccpwa"
-              className="input"
-              type="text"
-              placeholder=" "
-              rows="100"
-              cols="20"
-              onChange={userData}
-              name="creatorWalletAddress"
-              value={userValue.creatorWalletAddress}
-              required
-            />
-            <div className="cut cut-short" />
-            <label htmlFor="ccpwa" className="placeholder">
-              Content Creator Polygon Wallet Address <span>*</span>
-            </label>
-          </div>
-
-          <button
-            type="text"
-            className="submit"
-            onClick={() => {
-              if(userValue === " "){
-                alert("fill enteries");
-              }
-              else{
-                navigate("/profile");
-              }
-              collectSubmitedUserData();
-            }}
-          >
-            Create
-          </button>
         </div>
-
-        
       </div>
     </>
   );
 };
-
 export default Create;

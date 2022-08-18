@@ -1,58 +1,36 @@
-*{
-    font-family: 'Roboto Mono', monospace;
-
-}
-.login_nav{
-    /* border: 2px solid red; */
-    height: 100px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    /* position: fixed; */
-    /* width: 100%; */
-    /* top: 0%; */
-    /* background-image: linear-gradient(top, red, red 70%, transparent 70%, transparent 100%); */
-
+.login_nav {
+  height: 110px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 20px;
 }
 
-button{
-    cursor: pointer;
-}
 .logo {
-    height: 80px;
-    width: 150px;
-    /* border: 2px solid; */
-    margin-left: 30px;
+  height: 75px;
+  width: 150px;
 }
 
-.logo img{
-    height: 100%;
-    width: 100%;
+.logo img {
+  height: 100%;
+  width: 100%;
 }
 
-.connect_button{
-    margin-right: 50px;
-
-}
-.connect_button button{
-    padding: 10px 20px;
-    font-size:17px;
-    font-weight: 700;
-    cursor: pointer;
-    border-radius: 8px;
-    border: none;
-    background-color: black;
-    color: white;
-    cursor: pointer;
+.navButtonSection {
+  display: flex;
 }
 
-.create button{
-    padding: 10px 10px;
-    background: transparent;
-    border: transparent;
-    font-size: 22px;
-    font-weight: 700;
-    /* border: 2px solid; */
-    margin-left: 500px;
-    cursor: pointer !important;
+.navButton button {
+  border: none;
+  background: none;
+  background-color: var(--accent);
+  color: var(--primary);
+  font-style: italic;
+  margin: 0px 20px;
+  padding: 5px 20px;
+}
+
+.navButton button:hover {
+  animation: scaleup 0.3s;
+  transform: scale(1.1);
 }

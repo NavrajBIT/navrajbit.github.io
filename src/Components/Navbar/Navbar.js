@@ -1,42 +1,62 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
+import { useContext } from "react";
+import UserContext from "../../Context/UserContext";
 
 import logo from "../../Images/BITlogo.png";
+import "./Navbar.css";
 
-// import useNavigation from "use-navigation";
-// import { useNavigate } from "react-router";
-import "./Navbar.css"
-
-const Navbar = (props) => {
+const Navbar = () => {
+  const user = useContext(UserContext);
   const navigate = useNavigate();
-// const [text ,setText] = []
-
-
 
   return (
     <>
       <div className="login_nav">
         <div className="logo">
-          <img onClick={() => {
-            // navigate("/")
-          }}  
-          src={logo}
-           alt="" />
+          <img
+            onClick={() => {
+              navigate("/");
+            }}
+            src={logo}
+            alt="Beyond Imagination Technologies"
+          />
         </div>
-        <div className="create">
-          <button onClick={()=> {
-            navigate("/create")
-          }}>Create</button>
-        </div>
+        <div className="navButtonSection">
+          <div className="navButton">
+            <button
+              onClick={() => {
+                navigate("/explore");
+              }}
+            >
+              <h1>Explore</h1>
+            </button>
+          </div>
+          {user.isConnected && (
+            <div className="navButton">
+              <button
+                onClick={() => {
+                  navigate("/createtalent");
+                }}
+              >
+                <h1>Add Talent</h1>
+              </button>
+            </div>
+          )}
 
-       
-        <div className="connect_button">
-          <button onClick={() => {
-                        navigate("/categories")
-          }}>
-            {/* Connect Wallet */}
-            {props.text}
-          </button>
+          <div className="navButton">
+            <button
+              onClick={() => {
+                if (user.isConnected) {
+                  navigate("/profile");
+                } else {
+                  user.login();
+                }
+              }}
+            >
+              <h1>{user.isConnected ? "Profile" : "Connect"}</h1>
+            </button>
+          </div>
         </div>
       </div>
     </>

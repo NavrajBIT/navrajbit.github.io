@@ -1,0 +1,24 @@
+.khelvideocontainer {
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.khelvideoinfo {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+}
+
+.ratinginfo {
+  text-align: right;
+}
+
+.ratingstars:hover {
+  animation: scaleup 0.3s;
+  transform: scale(1.1);
+}
+
+.ratingstars img {
+  height: 20px;
+  width: 20px;
+}

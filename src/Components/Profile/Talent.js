@@ -1,8 +1,12 @@
-import React, { useState } from "react";
-import "./Categories.css";
+import React, { useContext, useState } from "react";
+import "./Profile.css";
+import { useNavigate } from "react-router-dom";
 import KhelVideo from "../Video/KhelVideo";
 
-const Categories = () => {
+export const Talent = () => {
+  const [isEditting, setIsEditting] = useState(false);
+  const navigate = useNavigate();
+
   const videosData = [
     {
       name: "Surender Singh",
@@ -78,60 +82,86 @@ const Categories = () => {
     },
   ];
 
+  const profileUrl =
+    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTGFAN7UKvo70IZwE_E99S4EiidVvU9BufSbQ&usqp=CAU";
+
+  const EditProfile = () => {
+    return (
+      <div className="editprofile">
+        <div className="editprofileSection">
+          <button onClick={() => setIsEditting(false)}>
+            <h2>X</h2>
+          </button>
+          <div className="editform">
+            <label htmlFor="profilepic">Profilepic:</label>
+            <input type="file" id="profilepic" />
+          </div>
+          <div className="editform">
+            <label htmlFor="name">Name:</label>
+            <input type="text" id="name" placeholder="Enter name" />
+          </div>
+          <div className="editform">
+            <label htmlFor="description">Description:</label>
+            <textarea
+              name="description"
+              id="description"
+              cols="30"
+              rows="10"
+            ></textarea>
+          </div>
+          <button onClick={() => setIsEditting(false)}>Save</button>
+        </div>
+      </div>
+    );
+  };
+
   return (
     <>
-      <div className="explorepage">
-        <div className="heading">
-          <h2>
-            Khelmanch enables people to identify and select the talents to next
-            level of their career.
-            <p>All you have to do is : View and Rate the Videos</p>
-          </h2>
+      <div className="profilepage">
+        <div className="profileSection">
+          <div className="imageSection">
+            <img src={profileUrl} alt="" />
+          </div>
+          <div className="dataSection">
+            <h1>Mahender Singh</h1>
+            <h2>Hockey Player</h2>
+            <h3>
+              The difference between the old ballplayer and the new ballplayer
+              is the jersey. The old ballplayer cared about the name on the
+              front. The new ballplayer cares about the name on the back."
+              sports caption for Instagram Witness the Power. The harder you
+              work, the harder it is to surrender. "One day of practice is like
+              one day of clean living. It doesn't do you any good." What makes
+              something special is not just what you have to gain, but what you
+              feel there is to lose. A champion is afraid of losing. Everyone
+              else is afraid of winning. A snooker game mixes ritual with
+              geometry
+            </h3>
+            <button onClick={() => setIsEditting(true)}>
+              <h2>Edit Profile</h2>
+            </button>
+          </div>
         </div>
-        <div className="explorepagecontent">
-          <div className="sidebar">
-            <div className="categoryheading">
-              <h2>Categories</h2>
-            </div>
-            <div className="category">
-              <h3>Cricket</h3>
-            </div>
-            <div className="category">
-              <h3>Volleyball</h3>
-            </div>
-            <div className="category">
-              <h3>Badminton</h3>
-            </div>
-            <div className="category">
-              <h3>Basketball</h3>
-            </div>
-            <div className="category">
-              <h3>Hockey</h3>
-            </div>
-            <div className="category">
-              <h3>Athletics</h3>
-            </div>
-          </div>
+        {isEditting && <EditProfile />}
 
-          <div className="videocontainer">
-            {videosData.map((video) => {
-              return (
-                <div key={video.title}>
-                  <KhelVideo
-                    src={video.src}
-                    title={video.title}
-                    player={video.name}
-                    sport={video.sport}
-                    rating="3.5"
-                  />
-                </div>
-              );
-            })}
-          </div>
+        <div className="videoSection">
+          {videosData.map((video) => {
+            return (
+              <div key={video.title}>
+                <KhelVideo
+                  src={video.src}
+                  title={"Mahender Singh playing Hockey"}
+                  player={"Mahender Singh"}
+                  sport={"Hockey"}
+                  rating="3.5"
+                />
+              </div>
+            );
+          })}
         </div>
       </div>
     </>
   );
 };
 
-export default Categories;
+export default Talent;

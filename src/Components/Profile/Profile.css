@@ -1,73 +1,106 @@
-.profile_body{
-    /* border: 2px solid red; */
-    height: 150vh;
-    display: flex;
-    /* background-color: red !important; */
-    padding: 10px 10px;
+.profilepage {
+  display: flex;
+  flex-direction: column;
 }
 
-.details_box_1 , .details_box_2{
-    border: 2px solid black;
-    /* flex: 50%; */
-    border-top: none;
-    border-bottom: none;
-    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-    border: none;
-    margin: 5px ;
-    margin-bottom: 70px;
-    
-}
-.details_box_1{
-    flex: 30%;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  
-}
-.details_box_1 div{
-    margin: 10px 0px;
+.profileSection {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  background-color: var(--secondary);
+  color: var(--primary);
+  padding: 20px;
 }
 
-.details_box_2{
-    flex:  70%;
-    display: flex;
-    flex-direction: column;
-    /* justify-content: left; */
-    align-items: center;
-    border-right: none;
-}
-.details_box_2 div{
-    margin: 20px 20px;
-    border: 1px solid;
-    width: 800px;
-    padding: 10px 20px;
-    background-color: black;
-    color: white;
-    border-radius: 5px;
-
-    
+.profileSection h1 {
+  color: var(--accent);
 }
 
-.achivements li{
-    margin-top: 10px;
-    list-style: none;
+.imageSection {
+  height: 300px;
+  width: 300px;
+  border-radius: 150px;
+  margin: 0px 20px;
 }
 
-.profile_image{
-    /* text-align: center; */
-    height: 250px;
-    width: 250px;
-    /* border: 2px solid ; */
-    /* width: 100%; */
-    /* border-radius: 50%; */
+.imageSection img {
+  height: 100%;
+  width: 100%;
+  border-radius: 150px;
 }
-.profile_image img{
-    border-radius: 100%;
-    /* border: 2px solid ; */
-    height: 100%;
-    width: 100%;
-    cursor: pointer;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 
+.editprofile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(255, 255, 255, 0.7);
+}
+
+.editprofileSection {
+  background-color: var(--primary);
+  width: 500px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 2px solid var(--accent);
+  border-radius: 20px;
+}
+
+.editform {
+  width: 460px;
+  padding: 10px 0px;
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+}
+
+.profilesectionheading {
+  margin: 20px;
+  border-bottom: 5px solid var(--accent);
+}
+
+.talentSection {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.talent {
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px;
+}
+
+.talentimage {
+  width: 200px;
+  height: 200px;
+  border-radius: 100px;
+}
+
+.talentimage:hover {
+  animation: scaleup 0.3s;
+  transform: scale(1.1);
+}
+
+.talentimage img {
+  width: 100%;
+  height: 100%;
+  border-radius: 100px;
+}
+
+.profilefunctionality {
+  display: flex;
+  justify-content: space-around;
+  padding: 40px 20px;
+}
+
+.videoSection {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
